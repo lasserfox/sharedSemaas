@@ -6,7 +6,7 @@ public class Pipeline {
     String CERT_FILE = "/home/e049773/Downloads/certs/personal/cert.pem"
     String KEY_FILE = "/home/e049773/Downloads/certs/personal/key.pem"
     
-    def String pipelineId = 'pipeline_' + (Math.abs(new  Random().nextInt() % 10))
+    def public String pipelineId = 'pipeline_' + (Math.abs(new  Random().nextInt() % 10))
     // Public int startDate = int(time.time() * 1000000000)
     // Public String trace = new Trace(traceId=pipelineId, spanKey='main')
     // Public ArrayList logs = []
