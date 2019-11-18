@@ -1,13 +1,12 @@
-class Pipeline {
-    String NS = "user.e049773"
-    String MR_TYPE = "model-type"
-    String MR = "model"
+public class Pipeline {
+    public String NS = "user.e049773"
+    public String MR_TYPE = "model-type"
+    public String MR = "model"
     
     String CERT_FILE = "/home/e049773/Downloads/certs/personal/cert.pem"
     String KEY_FILE = "/home/e049773/Downloads/certs/personal/key.pem"
-    String LOG_HOST = "https://omega.work-01.nextgen.igrupobbva"
     
-    Public String pipelineId = 'pipeline_' + str(random.randint(0, 10))
+    def String pipelineId = 'pipeline_' + str(random.randint(0, 10))
     Public int startDate = int(time.time() * 1000000000)
     Public String trace = new Trace(traceId=pipelineId, spanKey='main')
     Public ArrayList logs = []
