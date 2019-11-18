@@ -1,5 +1,3 @@
-package com.bbva
-
 class Persona {
     int edad = 20
     int altura = 170
@@ -19,4 +17,3 @@ class Persona {
 
 }
 
-return Persona();
