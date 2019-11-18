@@ -14,6 +14,8 @@ public class Pipeline {
 
     def Pipeline(){
         print ("pipelineId: " +pipelineId)
+        pipelineId = 'test_pipeline')
+        print ("pipelineId: " +pipelineId)
     }
     
     // def Pipeline (String pipelineId){
