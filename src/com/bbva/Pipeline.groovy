@@ -12,7 +12,7 @@ public class Pipeline {
     // Public ArrayList logs = []
     // Public ArrayList steps = []
 
-    def Pipeline(){
+    public Pipeline(){
         print ("pipelineId: " +pipelineId)
         pipelineId = 'test_pipeline'
         print ("pipelineId: " +pipelineId)
