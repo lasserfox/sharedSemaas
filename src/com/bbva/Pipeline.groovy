@@ -11,11 +11,14 @@ public class Pipeline {
     // Public String trace = new Trace(traceId=pipelineId, spanKey='main')
     // Public ArrayList logs = []
     // Public ArrayList steps = []
+    print ("pipelineId1: " +pipelineId)
+    pipelineId = 'test_pipeline_class'
+    print ("pipelineId1: " +pipelineId)
 
     public Pipeline(){
-        print ("pipelineId: " +pipelineId)
-        pipelineId = 'test_pipeline'
-        print ("pipelineId: " +pipelineId)
+        print ("pipelineId2: " +pipelineId)
+        pipelineId = 'test_pipeline_method'
+        print ("pipelineId2: " +pipelineId)
     }
     
     // def Pipeline (String pipelineId){
