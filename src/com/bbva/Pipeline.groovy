@@ -13,6 +13,7 @@ public class Pipeline {
     // Public ArrayList steps = []
 
     def Pipeline(){
+        print ("pipelineId: " +pipelineId)
     }
     
     // def Pipeline (String pipelineId){
