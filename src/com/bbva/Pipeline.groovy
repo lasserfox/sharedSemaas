@@ -7,10 +7,10 @@ public class Pipeline {
     String KEY_FILE = "/home/e049773/Downloads/certs/personal/key.pem"
     
     def String pipelineId = 'pipeline_' + str(int(Math.random()*10))
-    Public int startDate = int(time.time() * 1000000000)
-    Public String trace = new Trace(traceId=pipelineId, spanKey='main')
-    Public ArrayList logs = []
-    Public ArrayList steps = []
+    // Public int startDate = int(time.time() * 1000000000)
+    // Public String trace = new Trace(traceId=pipelineId, spanKey='main')
+    // Public ArrayList logs = []
+    // Public ArrayList steps = []
 
     def Pipeline(){
     }
