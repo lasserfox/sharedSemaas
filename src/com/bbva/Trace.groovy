@@ -12,7 +12,7 @@ public class Trace {
     // Public ArrayList logs = []
     // Public ArrayList steps = []
     
-    public sendTraceToSEMaaSViaFileDeltaAgent(jobID){
+    def public sendTraceToSEMaaSViaFileDeltaAgent(jobID){
         // GET
         println(jobID)
         def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection();
