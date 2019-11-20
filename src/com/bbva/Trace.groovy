@@ -7,6 +7,7 @@ public class Trace {
     String KEY_FILE = "/home/e049773/Downloads/certs/personal/key.pem"
     
     def public String TraceId = ''
+    def public text = ''
     // Public int startDate = int(time.time() * 1000000000)
     // Public String trace = new Trace(traceId=pipelineId, spanKey='main')
     // Public ArrayList logs = []
@@ -19,7 +20,8 @@ public class Trace {
         def getRC = get.getResponseCode();
         println(getRC);
         if(getRC.equals(200)) {
-        println(get.getInputStream().getText());
+            this.text=get.getInputStream().getText()
+            println(this.text);
         }
     }
     
