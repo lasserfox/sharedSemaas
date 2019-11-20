@@ -6,8 +6,8 @@ public class Trace {
     String CERT_FILE = "/home/e049773/Downloads/certs/personal/cert.pem"
     String KEY_FILE = "/home/e049773/Downloads/certs/personal/key.pem"
     
-    def public String TraceId = ''
-    def public text = ''
+    def public String TraceId = 'id'
+    def public text = 'insert text here'
     // Public int startDate = int(time.time() * 1000000000)
     // Public String trace = new Trace(traceId=pipelineId, spanKey='main')
     // Public ArrayList logs = []
