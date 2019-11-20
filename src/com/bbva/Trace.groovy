@@ -9,10 +9,10 @@ public class Trace {
     def public String TraceId = 'id'
     def public text = 'insert text here'
     
-    def public test(){
+    def public test(jobID){
         // GET
-        println('Hola')
-        this.text = 'Hola'
+        println('Hola'+jobID)
+        this.text = 'Holaaaa: '+ jobID
         def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
         this.text = get.getResponseCode()
     }
