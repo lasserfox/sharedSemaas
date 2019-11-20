@@ -20,6 +20,7 @@ public class Trace {
     def public sendTraceToSEMaaSViaFileDeltaAgent(jobID){
         // GET
         println(jobID)
+        http.auth.basic 'admin','admin'
         def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
         def getRC = get.getResponseCode()
         println(getRC)
