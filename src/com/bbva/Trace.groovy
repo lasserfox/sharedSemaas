@@ -8,16 +8,13 @@ public class Trace {
     
     def public String TraceId = 'id'
     def public text = 'insert text here'
-    // Public int startDate = int(time.time() * 1000000000)
-    // Public String trace = new Trace(traceId=pipelineId, spanKey='main')
-    // Public ArrayList logs = []
-    // Public ArrayList steps = []
     
     def public test(){
         // GET
         println('Hola')
         this.text = 'Hola'
-        
+        def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
+        this.text = get.getResponseCode()
     }
 
     def public sendTraceToSEMaaSViaFileDeltaAgent(jobID){
