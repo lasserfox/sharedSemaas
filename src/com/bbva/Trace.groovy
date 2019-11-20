@@ -13,6 +13,12 @@ public class Trace {
     // Public ArrayList logs = []
     // Public ArrayList steps = []
     
+    def public test(){
+        // GET
+        println('Hola')
+        
+    }
+
     def public sendTraceToSEMaaSViaFileDeltaAgent(jobID){
         // GET
         println(jobID)
