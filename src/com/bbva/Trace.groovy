@@ -9,25 +9,39 @@ public class Trace {
     def public String TraceId = 'id'
     def public text = 'insert text here'
     
+
+
     def public test(jobID){
         // GET
-        http.auth.basic 'admin','admin'
+        
         println('Hola'+jobID)
 
         this.text = 'Holaaaa: '+ jobID
-        def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
-        println (getRC)
-        if(getRC.equals(200)) {
-            this.text=get.getInputStream().getText()
-            println(this.text)
-        }
-        this.text = get.getResponseCode()
+        def url = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
+        URLConnection uc = url.openConnection();
+        String userpass = "admin:admin"
+        String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userpass.getBytes()));
+        uc.setRequestProperty ("Authorization", basicAuth);
+        InputStream in = uc.getInputStream();
+        println(in)
+
     }
 
     def public sendTraceToSEMaaSViaFileDeltaAgent(jobID){
         // GET
         println(jobID)
-        http.auth.basic 'admin','admin'
+        // def http = new HTTPBuilder(url)
+        // http.auth.basic 'admin','admin'
+        
+        def url = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe")
+        def urlConnection = url.openConnection()
+        urlConnection.setDoOutput(true)
+        urlConnection.setRequestMethod("GET")
+        def authString = "admin:admin".getBytes().encodeBase64().toString()
+        urlConnection.setRequestProperty("Authorization", "Basic ${authString}")
+        urlConnection.setRequestProperty("Content-Type", "application/json")
+
+
         def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
         def getRC = get.getResponseCode()
         println(getRC)
