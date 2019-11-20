@@ -11,9 +11,16 @@ public class Trace {
     
     def public test(jobID){
         // GET
+        http.auth.basic 'admin','admin'
         println('Hola'+jobID)
+
         this.text = 'Holaaaa: '+ jobID
         def get = new URL("http://localhost:8080/job/testGroovy/"+jobID+"/wfapi/describe").openConnection()
+        println (getRC)
+        if(getRC.equals(200)) {
+            this.text=get.getInputStream().getText()
+            println(this.text)
+        }
         this.text = get.getResponseCode()
     }
 
