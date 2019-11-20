@@ -16,6 +16,7 @@ public class Trace {
     def public test(){
         // GET
         println('Hola')
+        this.text = 'Hola'
         
     }
 
